@@ -5,10 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Office de Praia</title>
   <style>
-    body {
-      font-family: sans-serif;
+    * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
+    }
+    body {
+      font-family: Arial, sans-serif;
       background: #f0f8ff;
       color: #333;
     }
@@ -18,67 +21,102 @@
       padding: 20px;
       text-align: center;
     }
-    .logo {
-      max-width: 150px;
-      border-radius: 50%;
+    header img {
+      max-width: 120px;
+      border-radius: 10px;
     }
-    .container {
+    .carousel {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+    }
+    .carousel img {
+      width: 100%;
+      height: auto;
+      cursor: pointer;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      background: #007ba7;
+      padding: 10px;
+    }
+    nav button {
+      margin: 5px;
+      padding: 10px 20px;
+      background: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .content-section {
+      display: none;
       padding: 20px;
     }
-    .vitrine {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 10px;
-    }
-    .vitrine img {
-      width: 100%;
-      border-radius: 10px;
-    }
-    .botao-whatsapp {
+    .content-section.active {
       display: block;
+    }
+    .footer {
       text-align: center;
-      margin: 20px 0;
-    }
-    .botao-whatsapp a {
-      background: #25d366;
+      padding: 20px;
+      background: #0099cc;
       color: white;
-      padding: 15px 25px;
-      text-decoration: none;
-      border-radius: 10px;
-      font-weight: bold;
     }
-    iframe {
-      width: 100%;
-      height: 300px;
-      border: 0;
-      border-radius: 10px;
+    @media (min-width: 768px) {
+      .content-section {
+        max-width: 900px;
+        margin: auto;
+      }
     }
   </style>
 </head>
 <body>
-
   <header>
-    <img src="https://i.imgur.com/NZzjK0J.png" alt="Logo Office de Praia" class="logo">
+    <img src="logo_officedepraia.jpg" alt="Logo Office de Praia">
     <h1>Office de Praia</h1>
-    <p>Turismo, lifestyle e experiências no Arpoador</p>
+    <p>História do Rio de Janeiro contada através da capoeira</p>
+    <p>Colônia, pós-colônia, república, tempos atuais</p>
   </header>
 
-  <div class="container">
-    <h2>Vitrine</h2>
-    <div class="vitrine">
-      <img src="https://source.unsplash.com/200x200/?beach" alt="Foto 1">
-      <img src="https://source.unsplash.com/201x200/?sunset" alt="Foto 2">
-      <img src="https://source.unsplash.com/202x200/?surf" alt="Foto 3">
-      <img src="https://source.unsplash.com/203x200/?rio-de-janeiro" alt="Foto 4">
-    </div>
-
-    <div class="botao-whatsapp">
-      <a href="https://wa.me/5521999999999" target="_blank">Fale com a gente no WhatsApp</a>
-    </div>
-
-    <h2>Localização</h2>
-    <iframe src="https://www.google.com/maps?q=Arpoador,+Rio+de+Janeiro&output=embed"></iframe>
+  <div class="carousel">
+    <img src="logo_officedepraia.jpg" alt="Clique para abrir Passeio de Moto" onclick="showSection('passeio')">
   </div>
 
+  <nav>
+    <button onclick="showSection('passeio')">Passeio de Moto</button>
+    <button onclick="showSection('foto')">Fotografia e Impressão</button>
+    <button onclick="showSection('aventura')">Aventura no RJ</button>
+  </nav>
+
+  <div id="passeio" class="content-section">
+    <h2>Passeio de Moto</h2>
+    <p>Jonathan realiza o passeio pessoalmente do Leme ao Pontal, incluindo restaurantes, favelas, points instagramáveis e praias. Também acompanha turistas em roteiros tradicionais conduzidos por outros guias.</p>
+    <p>Nos pontos históricos, ele conta a trajetória da capoeira no RJ, da colônia até os tempos atuais, conectando com a evolução do estado.</p>
+    <p>Você escolhe pontos estratégicos para tirar fotos — valor e locais a combinar — dentro do município do RJ.</p>
+  </div>
+
+  <div id="foto" class="content-section">
+    <h2>Fotografia e Impressão</h2>
+    <p>Ensaio fotográfico no Arpoador com toda mídia disponível (inclui making of). Quantidade de fotos impressas a combinar. O pacote inclui até duas molduras e possibilidade de montar álbum personalizado.</p>
+  </div>
+
+  <div id="aventura" class="content-section">
+    <h2>Aventuras no RJ</h2>
+    <p>Mini-roteiro de filme de ação com caça ao tesouro pelo RJ. Roteiro personalizado conforme o perfil do cliente.</p>
+    <p>Brinquedos disponíveis: jet sky, helicóptero, carro, moto, pranchas de surf, lanchas, rapel, equipamentos e mergulho.</p>
+  </div>
+
+  <div class="footer">
+    <p>Fale com a gente: <a href="https://wa.me/5521999999999" target="_blank" style="color:white; text-decoration:underline">WhatsApp</a> | Instagram | Facebook</p>
+    <p>&copy; 2025 Office de Praia</p>
+  </div>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('.content-section').forEach(sec => sec.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
 </body>
 </html>
