@@ -24,23 +24,27 @@
     header img {
       max-width: 120px;
       border-radius: 10px;
+      margin-bottom: 10px;
     }
     .carousel {
       width: 100%;
       overflow: hidden;
       position: relative;
+      text-align: center;
+      margin-top: 10px;
     }
     .carousel img {
-      width: 100%;
+      max-width: 100%;
       height: auto;
       cursor: pointer;
+      border-radius: 10px;
     }
     nav {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
       background: #007ba7;
-      padding: 10px;
+      padding: 15px;
     }
     nav button {
       margin: 5px;
@@ -49,6 +53,10 @@
       border: none;
       border-radius: 5px;
       cursor: pointer;
+      transition: background 0.3s;
+    }
+    nav button:hover {
+      background: #eee;
     }
     .content-section {
       display: none;
@@ -62,6 +70,11 @@
       padding: 20px;
       background: #0099cc;
       color: white;
+    }
+    .footer a {
+      color: white;
+      text-decoration: underline;
+      margin: 0 5px;
     }
     @media (min-width: 768px) {
       .content-section {
@@ -108,7 +121,11 @@
   </div>
 
   <div class="footer">
-    <p>Fale com a gente: <a href="https://wa.me/5521999999999" target="_blank" style="color:white; text-decoration:underline">WhatsApp</a> | Instagram | Facebook</p>
+    <p>Fale com a gente:
+      <a href="https://wa.me/5521999999999" target="_blank">WhatsApp</a> |
+      <a href="https://instagram.com/seuPerfil" target="_blank">Instagram</a> |
+      <a href="https://facebook.com/seuPerfil" target="_blank">Facebook</a>
+    </p>
     <p>&copy; 2025 Office de Praia</p>
   </div>
 
