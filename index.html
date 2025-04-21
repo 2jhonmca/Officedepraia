@@ -1,139 +1,92 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<!DOCTYPE html><html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Office de Praia</title>
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
     body {
       font-family: Arial, sans-serif;
-      background: #f0f8ff;
-      color: #333;
+      margin: 0;
+      background-color: #f0f8ff;
+      color: #00334d;
     }
-    header {
-      background: #0099cc;
+    section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+    h2 {
+      color: #0077aa;
+    }
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      margin: 10px;
+      border-radius: 8px;
+      background-color: #0077aa;
       color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    footer {
+      background-color: #d4f1f9;
       padding: 20px;
       text-align: center;
     }
-    header img {
-      max-width: 120px;
-      border-radius: 10px;
-      margin-bottom: 10px;
-    }
-    .carousel {
-      width: 100%;
-      overflow: hidden;
-      position: relative;
-      text-align: center;
-      margin-top: 10px;
-    }
-    .carousel img {
+    img {
       max-width: 100%;
       height: auto;
-      cursor: pointer;
+      margin: 20px 0;
       border-radius: 10px;
-    }
-    nav {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      background: #007ba7;
-      padding: 15px;
-    }
-    nav button {
-      margin: 5px;
-      padding: 10px 20px;
-      background: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-    nav button:hover {
-      background: #eee;
-    }
-    .content-section {
-      display: none;
-      padding: 20px;
-    }
-    .content-section.active {
-      display: block;
-    }
-    .footer {
-      text-align: center;
-      padding: 20px;
-      background: #0099cc;
-      color: white;
-    }
-    .footer a {
-      color: white;
-      text-decoration: underline;
-      margin: 0 5px;
-    }
-    @media (min-width: 768px) {
-      .content-section {
-        max-width: 900px;
-        margin: auto;
-      }
     }
   </style>
 </head>
-<body>
-  <header>
-    <img src="logo_officedepraia.jpg" alt="Logo Office de Praia">
+<body>  <section id="home">
     <h1>Office de Praia</h1>
-    <p>História do Rio de Janeiro contada através da capoeira</p>
-    <p>Colônia, pós-colônia, república, tempos atuais</p>
-  </header>
-
-  <div class="carousel">
-    <img src="logo_officedepraia.jpg" alt="Clique para abrir Passeio de Moto" onclick="showSection('passeio')">
-  </div>
-
-  <nav>
-    <button onclick="showSection('passeio')">Passeio de Moto</button>
-    <button onclick="showSection('foto')">Fotografia e Impressão</button>
-    <button onclick="showSection('aventura')">Aventura no RJ</button>
-  </nav>
-
-  <div id="passeio" class="content-section">
-    <h2>Passeio de Moto</h2>
-    <p>Jonathan realiza o passeio pessoalmente do Leme ao Pontal, incluindo restaurantes, favelas, points instagramáveis e praias. Também acompanha turistas em roteiros tradicionais conduzidos por outros guias.</p>
-    <p>Nos pontos históricos, ele conta a trajetória da capoeira no RJ, da colônia até os tempos atuais, conectando com a evolução do estado.</p>
-    <p>Você escolhe pontos estratégicos para tirar fotos — valor e locais a combinar — dentro do município do RJ.</p>
-  </div>
-
-  <div id="foto" class="content-section">
-    <h2>Fotografia e Impressão</h2>
-    <p>Ensaio fotográfico no Arpoador com toda mídia disponível (inclui making of). Quantidade de fotos impressas a combinar. O pacote inclui até duas molduras e possibilidade de montar álbum personalizado.</p>
-  </div>
-
-  <div id="aventura" class="content-section">
-    <h2>Aventuras no RJ</h2>
-    <p>Mini-roteiro de filme de ação com caça ao tesouro pelo RJ. Roteiro personalizado conforme o perfil do cliente.</p>
-    <p>Brinquedos disponíveis: jet sky, helicóptero, carro, moto, pranchas de surf, lanchas, rapel, equipamentos e mergulho.</p>
-  </div>
-
-  <div class="footer">
-    <p>Fale com a gente:
-      <a href="https://wa.me/5521999999999" target="_blank">WhatsApp</a> |
-      <a href="https://instagram.com/seuPerfil" target="_blank">Instagram</a> |
-      <a href="https://facebook.com/seuPerfil" target="_blank">Facebook</a>
-    </p>
+    <p>Conheça o Rio de Janeiro com emoção, fotografia e história!</p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/45/Rio_de_Janeiro_-_Arpoador_-_Praia_do_Diabo.jpg" alt="Praia do Arpoador">
+    <a href="#ensaio" class="btn">Comece o Passeio</a>
+  </section>  <section id="ensaio">
+    <h2>Parte 1 - Ensaio Fotográfico no Arpoador</h2>
+    <p>Fotografias ao nascer e pôr do sol, molduras artesanais feitas na hora.</p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Praia_do_Arpoador_-_Rio_de_Janeiro.jpg" alt="Ensaio fotográfico no Arpoador">
+  </section>  <section id="orla">
+    <h2>Parte 2 - Passeio de Moto pelas Praias</h2>
+    <p>Leme, Arpoador, Vidigal, São Conrado, Praia dos Amores.</p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Vidigal_-_Rio_de_Janeiro.jpg" alt="Praia do Vidigal">
+  </section>  <section id="destaques">
+    <h2>Parte 2.1 - Destaques por Praia</h2>
+    <ul>
+      <li>Arpoador: Ensaio fotográfico</li>
+      <li>Leme: Fotos em pontos turísticos</li>
+      <li>Vidigal: Subida ao Mirante</li>
+      <li>São Conrado: Subida à Rocinha</li>
+      <li>Praia dos Amores: Jet ski e ilhas Tijucas</li>
+      <li>Alto da Boa Vista: Vista panorâmica secreta</li>
+    </ul>
+  </section>  <section id="citytour">
+    <h2>Parte 3 - Moto Turismo / City Tour</h2>
+    <p>Passeios urbanos, culturais e históricos em toda cidade do Rio.</p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/48/Escadaria_Selaron_-_Lapa_-_Rio_de_Janeiro.jpg" alt="Escadaria Selarón">
+  </section>  <section id="barco">
+    <h2>Parte 4 - Passeios de Barco</h2>
+    <p>Exploração da Baía de Guanabara e Costa Verde com agências parceiras.</p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/3/36/Ba%C3%ADa_de_Guanabara.jpg" alt="Passeio de barco pela Baía de Guanabara">
+  </section>  <section id="adrenalina">
+    <h2>Parte 5 - Adrenalina no Rio</h2>
+    <ul>
+      <li>Paraquedismo de helicóptero</li>
+      <li>Asa delta na Pedra Bonita</li>
+      <li>Trilha no Dois Irmãos</li>
+      <li>SUP em Copacabana</li>
+      <li>Mergulho profundo</li>
+    </ul>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Voo_de_asa_delta_da_Pedra_Bonita.jpg" alt="Asa Delta Pedra Bonita">
+  </section>  <section id="noite">
+    <h2>Parte 6 - Entretenimento Noturno</h2>
+    <p>Ingressos para festas e shows, com guias noturnos disponíveis.</p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/3/36/Sambadrome_Rio_Carnival.jpg" alt="Carnaval e vida noturna no Rio">
+  </section>  <footer>
+    <p>Fale com a gente: <a href="#">WhatsApp</a> | <a href="#">Instagram</a> | <a href="#">Facebook</a></p>
     <p>&copy; 2025 Office de Praia</p>
-  </div>
-
-  <script>
-    function showSection(id) {
-      document.querySelectorAll('.content-section').forEach(sec => sec.classList.remove('active'));
-      document.getElementById(id).classList.add('active');
-    }
-  </script>
-</body>
+  </footer></body>
 </html>
