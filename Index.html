@@ -1,124 +1,101 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<!DOCTYPE html><html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Office de Praia</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
+    * {
+      box-sizing: border-box;
       margin: 0;
-      background-color: #f0f8ff;
-      color: #00334d;
-    }
-    section {
-      padding: 40px 20px;
-      text-align: center;
-    }
-    h1, h2 {
-      color: #0077aa;
-    }
-    .btn {
-      display: inline-block;
-      padding: 10px 20px;
-      margin: 10px;
-      border-radius: 8px;
-      background-color: #0077aa;
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    footer {
-      background-color: #d4f1f9;
-      padding: 20px;
-      text-align: center;
-    }
-    img {
-      max-width: 100%;
-      height: auto;
-      margin: 20px 0;
-      border-radius: 10px;
-    }
-    ul {
-      list-style-type: none;
       padding: 0;
     }
-    li {
-      margin: 8px 0;
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #e6f2f8;
+      color: #333;
+      padding: 20px;
+    }
+    header {
+      text-align: center;
+      background: linear-gradient(to right, #00b4d8, #0077b6);
+      color: white;
+      padding: 40px 20px 30px;
+      border-radius: 12px;
+      margin-bottom: 30px;
+    }
+    header h1 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 18px;
+    }
+    .card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    .card h2 {
+      color: #023e8a;
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+    .card p {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+    .image-text-block {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .image-text-block img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 8px;
+      border: 2px solid #0077b6;
+    }
+    .cta-button {
+      background: #0077b6;
+      color: white;
+      padding: 12px 25px;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .cta-button:hover {
+      background: #023e8a;
     }
   </style>
 </head>
 <body>
-
-  <section id="home">
+  <header>
     <h1>Office de Praia</h1>
     <p>Conheça o Rio de Janeiro com emoção, fotografia e história!</p>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/4/45/Rio_de_Janeiro_-_Arpoador_-_Praia_do_Diabo.jpg" alt="Praia do Arpoador">
-    <a href="#ensaio" class="btn">Comece o Passeio</a>
-  </section>
-
-  <section id="ensaio">
+  </header>  <div class="card">
+    <div class="image-text-block">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Arpoador_-_Rio_de_Janeiro.jpg/800px-Arpoador_-_Rio_de_Janeiro.jpg" alt="Praia do Arpoador">
+      <div>
+        <h2>Praia do Arpoador</h2>
+        <button class="cta-button">Comece o Passeio</button>
+      </div>
+    </div>
+  </div>  <div class="card">
     <h2>Parte 1 - Ensaio Fotográfico no Arpoador</h2>
     <p>Fotografias ao nascer e pôr do sol, molduras artesanais feitas na hora.</p>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Praia_do_Arpoador_-_Rio_de_Janeiro.jpg" alt="Ensaio fotográfico no Arpoador">
-  </section>
-
-  <section id="orla">
+    <div class="image-text-block">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Sunset_at_Arpoador.jpg/800px-Sunset_at_Arpoador.jpg" alt="Ensaio no Arpoador">
+      <span>Ensaio fotográfico no Arpoador</span>
+    </div>
+  </div>  <div class="card">
     <h2>Parte 2 - Passeio de Moto pelas Praias</h2>
     <p>Leme, Arpoador, Vidigal, São Conrado, Praia dos Amores.</p>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Vidigal_-_Rio_de_Janeiro.jpg" alt="Praia do Vidigal">
-  </section>
-
-  <section id="destaques">
-    <h2>Parte 2.1 - Destaques por Praia</h2>
-    <ul>
-      <li>Arpoador: Ensaio fotográfico</li>
-      <li>Leme: Fotos em pontos turísticos</li>
-      <li>Vidigal: Subida ao Mirante</li>
-      <li>São Conrado: Subida à Rocinha</li>
-      <li>Praia dos Amores: Jet ski e ilhas Tijucas</li>
-      <li>Alto da Boa Vista: Vista panorâmica secreta</li>
-    </ul>
-  </section>
-
-  <section id="citytour">
-    <h2>Parte 3 - Moto Turismo / City Tour</h2>
-    <p>Passeios urbanos, culturais e históricos em toda cidade do Rio.</p>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/4/48/Escadaria_Selaron_-_Lapa_-_Rio_de_Janeiro.jpg" alt="Escadaria Selarón">
-  </section>
-
-  <section id="barco">
-    <h2>Parte 4 - Passeios de Barco</h2>
-    <p>Exploração da Baía de Guanabara e Costa Verde com agências parceiras.</p>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/3/36/Ba%C3%ADa_de_Guanabara.jpg" alt="Passeio de barco pela Baía de Guanabara">
-  </section>
-
-  <section id="adrenalina">
-    <h2>Parte 5 - Adrenalina no Rio</h2>
-    <ul>
-      <li>Paraquedismo de helicóptero</li>
-      <li>Asa delta na Pedra Bonita</li>
-      <li>Trilha no Dois Irmãos</li>
-      <li>SUP em Copacabana</li>
-      <li>Mergulho profundo</li>
-    </ul>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Voo_de_asa_delta_da_Pedra_Bonita.jpg" alt="Asa Delta Pedra Bonita">
-  </section>
-
-  <section id="noite">
-    <h2>Parte 6 - Entretenimento Noturno</h2>
-    <p>Ingressos para festas e shows, com guias noturnos disponíveis.</p>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/3/36/Sambadrome_Rio_Carnival.jpg" alt="Carnaval e vida noturna no Rio">
-  </section>
-
-  <footer>
-    <p>Fale com a gente:
-      <a href="https://wa.me/5521999999999">WhatsApp</a> |
-      <a href="https://instagram.com/seuperfil">Instagram</a> |
-      <a href="https://facebook.com/seupage">Facebook</a>
-    </p>
-    <p>&copy; 2025 Office de Praia</p>
-  </footer>
-
+  </div>
 </body>
 </html>
